@@ -50,7 +50,7 @@ app.message(async ({ message, say }) => {
       // Decode the URL to remove %3E
       const decodedUrl = decodeURIComponent(url).replace(/>/g, '');
 
-      console.log("These is ppt url...........", decodedUrl.match(pdfRegex));
+      //console.log("These is ppt url...........", decodedUrl.match(pdfRegex));
 
       if (decodedUrl.match(pdfRegex)) {
         isPdfLink = true;
@@ -81,7 +81,7 @@ app.message(async ({ message, say }) => {
     const isOtherLink = false;
     for (const url of urls) {
       const decodedUrl = decodeURIComponent(url).replace(/>/g, '');
-      console.log("These is url.........", decodedUrl)
+      // console.log("These is url.........", decodedUrl)
       if (!isYoutubeLink && !isPdfLink) {
         const isOtherLink = true;
         // Call the API with required parameters for YouTube link
@@ -218,3 +218,9 @@ function extractUrls(text) {
 //     console.error(error);
 //   }
 // });
+
+
+
+
+
+
